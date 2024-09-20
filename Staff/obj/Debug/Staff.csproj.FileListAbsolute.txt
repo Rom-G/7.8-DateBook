@@ -1,0 +1,14 @@
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\obj\Debug\Staff.csproj.AssemblyReference.cache
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\obj\Debug\Staff.csproj.CoreCompileInputs.cache
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\obj\Debug\Personal.exe
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\obj\Debug\Personal.pdb
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\bin\Debug\Personal.exe.config
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\bin\Debug\Personal.exe
+C:\Users\rom-g\source\repos\6.6_Practical_work\Personal\bin\Debug\Personal.pdb
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\bin\Debug\Staff.exe.config
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\bin\Debug\Staff.exe
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\bin\Debug\Staff.pdb
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\obj\Debug\Staff.csproj.AssemblyReference.cache
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\obj\Debug\Staff.csproj.CoreCompileInputs.cache
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\obj\Debug\Staff.exe
+C:\Users\rom-g\source\repos\7.8-Staff\Staff\obj\Debug\Staff.pdb
