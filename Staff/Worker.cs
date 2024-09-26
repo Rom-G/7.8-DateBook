@@ -22,21 +22,21 @@ namespace Staff
         /// <param name="DateOfBirth">Дата рождения</param>
         /// <param name="PlaceOfBirth">Место рождения</param>
         public Worker(
-            int ID, 
-            DateTime DateAndTime, 
-            string Name, 
-            int Age, 
-            int Height, 
-            DateTime DateOfBirth, 
-            string PlaceOfBirth)
+            int iD, 
+            DateTime dateAndTime, 
+            string name, 
+            int age, 
+            int height, 
+            DateTime dateOfBirth, 
+            string placeOfBirth)
         {
-            this.iD = ID;
-            this.dateAndTime = DateAndTime;
-            this.name = Name;
-            this.age = Age;
-            this.height = Height;
-            this.dateOfBirth = DateOfBirth;
-            this.placeOfBirth = PlaceOfBirth;
+            ID = iD;
+            DateAndTime = dateAndTime;
+            Name = name;
+            Age = age;
+            Height = height;
+            DateOfBirth = dateOfBirth;
+            PlaceOfBirth = placeOfBirth;
         }
 
         /// <summary>
@@ -66,76 +66,41 @@ namespace Staff
         /// <summary>
         /// ID
         /// </summary>
-        public int ID { get { return this.iD; } set { this.iD = value; } }
+        public int ID { get; set; }
 
         /// <summary>
         /// Дата и время добавления записи
         /// </summary>
-        public DateTime DateAndTime { get { return this.dateAndTime; } set { this.dateAndTime = value; } }
+        public DateTime DateAndTime { get; set; }
 
         /// <summary>
         /// Фамилия Имя Отчество
         /// </summary>
-        public string Name { get { return this.name; } set { this.name = value; } }
+        public string Name { get; set; }
 
         /// <summary>
         /// Возраст
         /// </summary>
-        public int Age { get { return this.age; } set { this.age = value; } }
+        public int Age { get; set; }
 
         /// <summary>
         /// Рост
         /// </summary>
-        public int Height { get { return this.height; } set { this.height = value; } }
+        public int Height { get; set; }
 
         /// <summary>
         /// Дата рождения
         /// </summary>
-        public DateTime DateOfBirth { get { return dateOfBirth; } set { this.dateOfBirth = value; } }
+        public DateTime DateOfBirth { get; set; }
 
         /// <summary>
         /// Место рождения
         /// </summary>
-        public string PlaceOfBirth { get { return placeOfBirth; } set { this.placeOfBirth = value; } }
+        public string PlaceOfBirth { get; set; }
 
         #endregion
 
         #region Поля
-
-        /// <summary>
-        /// Поле "ID"
-        /// </summary>
-        private int iD;
-
-        /// <summary>
-        /// Поле "Дата и время добавления записи"
-        /// </summary>
-        private DateTime dateAndTime;
-
-        /// <summary>
-        /// Поле "Фамилия Имя Отчество"
-        /// </summary>
-        private string name;
-
-        /// <summary>
-        /// Поле "Возраст"
-        /// </summary>
-        private int age;
-
-        /// <summary>
-        /// Поле "Рост"
-        /// </summary>
-        private int height;
-
-        /// <summary>
-        /// Поле "Дата рождения"
-        /// </summary>
-        private DateTime dateOfBirth;
-
-        /// <summary>
-        /// Поле "Место рождения"
-        /// </summary>
-        private string placeOfBirth;
 
         /// <summary>
         /// Формат дат (d - дд.мм.гггг).
@@ -156,13 +121,13 @@ namespace Staff
 
         public string Print()
         {
-            return  $"{this.iD,3}" +
-                    $"{this.dateAndTime.ToString(formatDateTime),19}" +
-                    $"{this.name,32}" +
-                    $"{this.age,8}" +
-                    $"{this.height,5}" +
-                    $"{this.dateOfBirth.ToString(formatDate),14}" +
-                    $"{this.placeOfBirth,20}";
+            return  $"{this.ID,3}" +
+                    $"{this.DateAndTime.ToString(formatDateTime),19}" +
+                    $"{this.Name,32}" +
+                    $"{this.Age,8}" +
+                    $"{this.Height,5}" +
+                    $"{this.DateOfBirth.ToString(formatDate),14}" +
+                    $"{this.PlaceOfBirth,20}";
         }
 
         #endregion
