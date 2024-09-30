@@ -22,11 +22,11 @@ namespace Staff
         /// <summary>
         /// Индекс текущей записи в базовом массиве данных.
         /// </summary>
-        int index;
+        private int index;
         /// <summary>
         /// Следующий ID для нового сотрудника.
         /// </summary>
-        public int nextID;
+        private int nextID;
         /// <summary>
         /// Массив заголовков столбцов.
         /// </summary>
@@ -49,7 +49,7 @@ namespace Staff
         /// <summary>
         /// Метод загрузки данных из файла.
         /// </summary>
-        public void Load()
+        private void Load()
         {
             if (!File.Exists(this.path))
             {
@@ -81,7 +81,7 @@ namespace Staff
         /// <summary>
         /// Метод создания пустого файла, в случае его отсутствия.
         /// </summary>
-        public void CreateFile()
+        private void CreateFile()
         {
             using (StreamWriter sw = new StreamWriter(this.path, false, Encoding.Unicode))
             {
@@ -93,6 +93,15 @@ namespace Staff
                              "Дата рождения#" +
                              "Место рождения");
             }
+        }
+
+        /// <summary>
+        /// Метод, возвращающий ID для нового сотрудника.
+        /// </summary>
+        /// <returns>ID для нового сотрудника.</returns>
+        public int GetNextWorkerID()
+        {
+            return nextID;
         }
 
         /// <summary>
@@ -136,7 +145,7 @@ namespace Staff
         /// Метод увеличения массива для работы с данными.
         /// </summary>
         /// <param name="Flag">Условие увеличения</param>
-        public void Increase(bool Flag)
+        private void Increase(bool Flag)
         {
             if (Flag)
             {
@@ -152,14 +161,7 @@ namespace Staff
         {
             using (StreamWriter sw = new StreamWriter(path, false, Encoding.Unicode))
             {
-                string line = String.Format("{0}#{1}#{2}#{3}#{4}#{5}#{6}",
-                                            this.headers[0],
-                                            this.headers[1],
-                                            this.headers[2],
-                                            this.headers[3],
-                                            this.headers[4],
-                                            this.headers[5],
-                                            this.headers[6]);
+                string line = String.Join("#", headers);
                 sw.WriteLine(line);
 
                 for (int i = 0; i < index; i++)

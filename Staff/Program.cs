@@ -11,7 +11,7 @@ namespace Staff
         /// Метод, взаимодействующий с пользователем.
         /// </summary>
         /// <param name="rep">Имя текущего экземпляра класса Repository.</param> 
-        static void Dialogue(Repository rep)
+        static void InterviewUsers(Repository rep)
         {
             List();
             char key = 'д';
@@ -124,10 +124,10 @@ namespace Staff
         /// <param name="rep">Имя текущего экземпляра класса Repository.</param>
         static void CreatingWorker(Repository rep)
         {
-            Worker newWorker = Questionnaire();
+            Worker newWorker = GetWorkerInformation();
 
-            newWorker.ID = rep.nextID;
-            Console.WriteLine($"ID сотрудника - {rep.nextID}");
+            newWorker.ID = rep.GetNextWorkerID();
+            Console.WriteLine($"ID сотрудника - {rep.GetNextWorkerID()}");
 
             newWorker.DateAndTime = DateTime.Now;
             Console.WriteLine($"Дата и время записи - {newWorker.DateAndTime.ToString(Worker.formatDateTime)}");
@@ -155,7 +155,7 @@ namespace Staff
                 PrintWorkers(rep, editableWorker);
 
                 Console.WriteLine("\nЗаполните поля новыми данными.");
-                Worker newData = Questionnaire();
+                Worker newData = GetWorkerInformation();
                 newData.ID = id;
                 newData.DateAndTime = editableWorker.DateAndTime;
 
@@ -167,7 +167,7 @@ namespace Staff
         /// <summary>
         /// Метод для заполнения сведений о сотруднике.
         /// </summary>
-        static Worker Questionnaire()
+        static Worker GetWorkerInformation()
         {
             Console.Write("Введите Ф.И.О. сотрудника: ");
             string name = Console.ReadLine();
@@ -337,7 +337,7 @@ namespace Staff
             string path = @"staff.csv";
             Repository rep = new Repository(path);
             Console.WriteLine("Ежедневник \"Cотрудники\".\n");
-            Dialogue(rep);
+            InterviewUsers(rep);
         }
     }
 }
